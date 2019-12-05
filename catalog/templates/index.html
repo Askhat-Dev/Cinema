@@ -1,0 +1,59 @@
+{% extends "head.html" %}
+{% load staticfiles %}
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <a href="http://127.0.0.1:8000/MainPage/film1/" class="col-md-4 my-5 navbar-brand" style="color:#FFFFFF"><img src="{% static 'img/ford.jpg' %}"  style="width:100%"></a>
+        <div class="col-md-4 my-4" ><a href="http://127.0.0.1:8000/MainPage/film1/" class="navbar-brand"style="color:#0000СС"><h4>Ford против Ferrari</h4></a>
+            <div style="color: #C0C0C0">Сюжет повествует о группе американских инженеров и дизайнеров. В 1960-х под руководством конструктора Кэрролла Шелби и при поддержке британского гонщика Кена Майлса они должны были с нуля сделать абсолютно новый спорткар, способный опередить Феррари — непобедимого чемпиона 24-часовой гонки на выносливость Ле-Ман.</div>
+        </div>
+        <hr align="left" width="800" size="2" color="#FFFFFF" /><br/>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <a href="http://127.0.0.1:8000/MainPage/film2/" class="col-md-4 my-4 navbar-brand" style="color:#FFFFFF"><img src="{% static 'img/5.jpg' %}"  style="width:100% "></a>
+        <div class="col-md-4 my-4" ><a href="http://127.0.0.1:8000/MainPage/film2/" class="navbar-brand"style="color:#0000СС"><h4>Красавчики до нашей эры</h4></a>
+            <div style="color: #C0C0C0">История о первобытном племени - «племени красавчиков». Они ни в чем не нуждаются, всё свободное время прячутся в тени от солнца, занимаются бесполезными делами и существуют за счет соседнего племени, которое днём и ночью работает - «племени рабочих».</div>
+        </div>
+        <hr align="left" width="800" size="2" color="#FFFFFF" /><br/>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <a href="http://127.0.0.1:8000/MainPage/film3/" class="col-md-4 my-4 navbar-brand" style="color:#FFFFFF"><img src="{% static 'img/4.jpg' %}"  style="width:100%"></a>
+        <div class="col-md-4 my-4" ><a href="http://127.0.0.1:8000/MainPage/film3/" class="navbar-brand"style="color:#0000СС"><h4>Аким</h4></a>
+            <div style="color: #C0C0C0">Молодого мажора по имени Азамат, привыкшего к комфортной городской жизни, по стечению непредвиденных обстоятельств, отправляют работать Акимом в отдаленный посёлок - Таза Булак.
+Естественно, он не «испытывает большого восторга» от такого поворота событий.
+Возрастной рейтинг: с 12 лет</div>
+        </div>
+        <hr align="left" width="800" size="2" color="#FFFFFF" /><br/>
+    </div>
+</div>
+
+
+
+{% for i in num_books %}
+
+<div class="container">
+    <div class="row">
+        <a href="http://127.0.0.1:8000/MainPage/film1/" class="col-md-4 my-4 navbar-brand" style="color:#FFFFFF"><img src="{% static 'img/1.jpg' %}"  style="width:100%"></a>
+        <div class="col-md-4 my-4" ><a href="http://127.0.0.1:8000/MainPage/film4/" class="navbar-brand"style="color:#0000СС"><h4>{{ i.title }}</h4></a>
+            <div style="color: #C0C0C0">{{i.summary}}</div>
+        </div>
+        <hr align="left" width="800" size="2" color="#FFFFFF" /><br/>
+    </div>
+</div>
+
+
+
+
+
+
+{% endfor %}
+{% endblock %}
+</body>
+
+

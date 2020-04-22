@@ -1,2 +1,2 @@
 # Cinema
-Cinema_System Django
+Site about Fims (Django)
